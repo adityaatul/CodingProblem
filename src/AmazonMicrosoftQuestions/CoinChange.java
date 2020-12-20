@@ -25,7 +25,7 @@ class Solution5 {
         }
         int ans = Integer.MAX_VALUE;
         for(int i = 0; i < coins.length; i++){
-            int temp = minCoinNeeded(coins, amount - coins[i]);
+            int temp = minCoinNeeded(coins, amount - coins[i] );
             if(temp != -1){
                 ans = Math.min(temp + 1, ans);
             }
