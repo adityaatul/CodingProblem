@@ -36,13 +36,11 @@ class Solution {
 //             }
 //         }
 //         return head;
-        // if (lists == null || lists.length == 1 && lists[0] == null) {
-        //     return null;
-        // }
+
         ListNode head = null, temp = null;
         int size = lists.length;
         int seen = 0;
-        
+ // O(n*k) TC, O(1) S       
         while (size != seen) {
             int min = 100009, pos = -1;
             for (int i = 0; i < size; i++) {
