@@ -14,6 +14,10 @@ class Solution {
             for (int i : hash) {
                 sb.append("#");
                 sb.append(i);
+                /*
+                ["abbbbbbbbbbb","aaaaaaaaaaab"]
+                1#11, 11#1 - why we append hash
+                */
             }
             if (!map.containsKey(sb.toString())) {
                 map.put(sb.toString() , new ArrayList<>());
