@@ -1,3 +1,5 @@
+//Template can be used for any questions with sliding window 
+
 class Solution {
     public String minWindow(String s, String t) {
         if (s.length() == 0 || t.length() == 0) {
@@ -26,8 +28,8 @@ class Solution {
             
             while (left <= right && found == required) {
                 char cL = s.charAt(left);
-                if (ans[0] == -1 || right - left < ans[2] - ans[1]) {
-                    ans[0] = right - left;
+                if (ans[0] == -1 || right - left < ans[2] - ans[1]) { 
+                    ans[0] = right - left; //size
                     ans[1] = left;
                     ans[2] = right;
                 }
@@ -46,4 +48,8 @@ class Solution {
 
 /*
 s = "ADOBECODEBANC", t = "ABC"
+ADOBEC
+DOBECODEBA
+ODEBANC -> BANC
+
 */
