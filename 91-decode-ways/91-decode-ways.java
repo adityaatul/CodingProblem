@@ -18,8 +18,7 @@ class Solution {
         }
         
         int ans = numDecodingsHelper(s, s.length(), i + 1, memo);
-        if (Integer.valueOf(s.substring(i, i + 2)) <= 26 &&
-           Integer.valueOf(s.substring(i, i + 2)) > 9) {
+        if (Integer.valueOf(s.substring(i, i + 2)) <= 26) {
             ans += numDecodingsHelper(s, s.length(), i + 2, memo);
         }
         
