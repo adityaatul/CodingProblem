@@ -16,9 +16,9 @@ class Solution {
             }
             
             if (nums[pivot] > nums[low]) {
-                low = pivot + 1;
+                low = pivot + 1; // Condn checking for pivot + 1 so low can be adjusted for pivot + 1 ;
             } else {
-                high = pivot;
+                high = pivot; //If condn checking for pivot - 1 L14 then we can adjust here as well. 
             }
         }
         return -1;
