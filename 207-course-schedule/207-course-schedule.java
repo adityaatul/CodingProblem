@@ -28,7 +28,7 @@ class Solution {
                     stack.push(node);
                     Set<Integer> seen = new HashSet<>();
                     seen.add(node);
-                    while (!stack.isEmpty() && stack.peek() != i) {
+                    while (!stack.isEmpty()) {
                         int head = stack.pop();
                         seen.add(head);
                         for (int n : graph.get(head)) {
@@ -39,9 +39,6 @@ class Solution {
                                 stack.push(n);
                             }
                         }
-                    }
-                    if (!stack.isEmpty()) {
-                        return false;
                     }
                 }
             }
